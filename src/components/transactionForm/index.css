@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@media (min-width: 800px) {
+  .transaction-info-input {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    width: 377px;
+    border-radius: 4px 0px 0px 4px;
+    box-sizing: border-box;
+  }
+  .transaction-info-input > h2 {
+    margin: 10% 10% 0px 10%;
+    width: 250px;
+
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    line-height: 28px;
+    color: #656565;
+  }
+  .transaction-info-input > small {
+    margin: 10px 10% 0px 10%;
+    font-size: 16px;
+    color: black;
+    opacity: 78%;
+    text-align: left;
+  }
+  .transaction-info-input > input {
+    padding: 0;
+    margin: 5px 10%;
+    height: 28px;
+    width: 250px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.158);
+  }
+  .transaction-info-input > input:hover {
+    border-color: rgba(64, 224, 208, 0.836);
+  }
+}
+
+@media (max-width: 800px) {
+  .transaction-info-input {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    width: 90vw;
+    height: 50%;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .transaction-info-input > h2 {
+    margin: 10% 10% 0px 10%;
+    width: 80%;
+
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    line-height: 28px;
+    color: #656565;
+  }
+  .transaction-info-input > small {
+    margin: 10px 10% 0px 10%;
+    font-size: 16px;
+    color: black;
+    opacity: 78%;
+    text-align: left;
+  }
+  .transaction-info-input > input {
+    padding: 0;
+    margin: 5px 10%;
+    height: 28px;
+    width: 80%;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.158);
+  }
+  .transaction-info-input > input:hover {
+    border-color: rgba(64, 224, 208, 0.836);
+  }
+}

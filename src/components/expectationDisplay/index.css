@@ -1,0 +1,42 @@
+@media (min-width: 800px) {
+    .payment-expectations {
+      width: 231px;
+      font-size: 20px;
+    }
+    .payment-expectations > h3 {
+      margin: 30% 0px 0px 0px;
+      font-size: 20px;
+      color: #3f879b;
+      opacity: 87%;
+    }
+    .solid {
+      margin: 5px 35%;
+      border-top: 1px solid #3f879b;
+    }
+    .payment-expectations > p {
+      margin: 15px;
+      color: #2db8df;
+    } 
+  }
+  
+  @media (max-width: 800px) {
+      .payment-expectations {
+        width: 90vw;
+        font-size: 20px;
+      }
+      .payment-expectations > h3 {
+        margin: 10% 0px 0px 0px;
+        font-size: 20px;
+        color: #3f879b;
+        opacity: 87%;
+      }
+      .solid {
+        margin: 5px 35%;
+        border-top: 1px solid #3f879b;
+      }
+      .payment-expectations > p {
+        margin: 15px;
+        color: #2db8df;
+      } 
+  }
+  
