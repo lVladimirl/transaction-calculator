@@ -1,11 +1,11 @@
 import { ExpectationDisplay } from "../expectationDisplay";
 import { TransactionForm } from "../transactionForm";
 import "./index.css";
-export const TransactionContainer = () => {
+export const TransactionContainer = ({previsionDates, setPrevisionDates}) => {
   return (
     <div className="transaction-container">
-      <TransactionForm/>
-      <ExpectationDisplay/>
+      <TransactionForm setPrevisionDates={setPrevisionDates}/>
+      <ExpectationDisplay previsionDates={previsionDates}/>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 @media (min-width: 800px) {
   .transaction-info-input {
     background-color: white;
@@ -16,17 +16,19 @@
     margin: 10% 10% 0px 10%;
     width: 250px;
 
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     font-size: 24px;
     line-height: 28px;
     color: #656565;
   }
-  .transaction-info-input > small {
+  .transaction-info-input > label {
     margin: 10px 10% 0px 10%;
-    font-size: 16px;
-    color: black;
-    opacity: 78%;
+    width: 80%;
+    margin: 0 10%;
     text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
   }
   .transaction-info-input > input {
     padding: 0;
@@ -38,6 +40,15 @@
   }
   .transaction-info-input > input:hover {
     border-color: rgba(64, 224, 208, 0.836);
+  }
+  .transaction-info-input > span {
+    color: crimson;
+    width: 80%;
+    margin: 0 10%;
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
   }
 }
 
@@ -58,12 +69,12 @@
     margin: 10% 10% 0px 10%;
     width: 80%;
 
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     font-size: 24px;
     line-height: 28px;
     color: #656565;
   }
-  .transaction-info-input > small {
+  .transaction-info-input > label {
     margin: 10px 10% 0px 10%;
     font-size: 16px;
     color: black;

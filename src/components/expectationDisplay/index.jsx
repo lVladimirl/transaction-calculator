@@ -1,13 +1,14 @@
 import "./index.css";
-export const ExpectationDisplay = () => {
+export const ExpectationDisplay = ({previsionDates}) => {
+  console.log(previsionDates)
+  // transforme o previsionDates em um array de objetos, "key":"value", use foreach para representar o valor
   return (
     <div className="payment-expectations">
       <h3>Você recebera:</h3>
       <hr class="solid"></hr>
-      <p>Amanha:</p>
-      <p>Em 15 dias:</p>
-      <p>Em 30 dias:</p>
-      <p>Em 90 dias:</p>
+      {previsionDates && previsionDates.array.forEach(element => {
+        // <p>em {element.key}: {element.value}</p>
+      })}
     </div>
   );
 };
