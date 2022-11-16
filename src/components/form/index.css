@@ -13,8 +13,89 @@
     box-sizing: border-box;
   }
   .transaction-info-input > h2 {
-    margin: 10% 10% 0px 10%;
+    margin: 5% 10% 0px 10%;
     width: 250px;
+
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 24px;
+    line-height: 28px;
+    color: #656565;
+    text-align: left;
+  }
+  .transaction-info-input > label {
+    margin: 10px 10% 0px 10%;
+    width: 80%;
+    margin: 0 10%;
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .transaction-info-input > input {
+    box-sizing: border-box;
+    margin: 5px 10%;
+    padding: 4px;
+    
+    height: 28px;
+    width: 250px;
+    
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.158);
+  }
+  .transaction-info-input > input:hover {
+    border-color: rgba(64, 224, 208, 0.836);
+  }
+  .transaction-info-input > label > span {
+    color: crimson;
+    width: 80%;
+    margin: 0 2%;
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+  }
+  .transaction-info-input > small {
+    color: #3f879b;
+    width: 80%;
+    margin: 0 10%;
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+  }
+  .transaction-info-input > button {
+    margin: 10px 10% 0px 10%;
+    align-self: left;
+
+    width: 250px;
+    height: 28px;
+
+    background-color: #3f879b;
+    border: none;
+    border-radius: 4px;
+
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+  }
+}
+
+@media (max-width: 800px) {
+  .transaction-info-input {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    width: 90vw;
+    height: auto;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .transaction-info-input > h2 {
+    margin: 10% 10% 0px 10%;
+    width: 80%;
 
     font-family: "Source Sans Pro", sans-serif;
     font-size: 24px;
@@ -31,18 +112,30 @@
     font-size: 14px;
   }
   .transaction-info-input > input {
-    padding: 0;
+    box-sizing: border-box;
     margin: 5px 10%;
+    padding: 4px;
+    
     height: 28px;
-    width: 250px;
+    width: 80%;
+    
     border-radius: 4px;
     border: 1px solid rgba(0, 0, 0, 0.158);
   }
   .transaction-info-input > input:hover {
     border-color: rgba(64, 224, 208, 0.836);
   }
-  .transaction-info-input > span {
+  .transaction-info-input > label > span {
     color: crimson;
+    width: 80%;
+    margin: 0 2%;
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+  }
+  .transaction-info-input > small {
+    color: #3f879b;
     width: 80%;
     margin: 0 10%;
     text-align: left;
@@ -50,46 +143,19 @@
     font-weight: 400;
     font-size: 11px;
   }
-}
+  .transaction-info-input > button {
+    margin: 5px 10% 10%;
+    align-self: left;
 
-@media (max-width: 800px) {
-  .transaction-info-input {
-    background-color: white;
-    margin: 0;
-    padding: 0;
-
-    display: flex;
-    flex-flow: column nowrap;
-
-    width: 90vw;
-    height: 50%;
-    border-radius: 10px 10px 0px 0px;
-  }
-  .transaction-info-input > h2 {
-    margin: 10% 10% 0px 10%;
     width: 80%;
-
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 24px;
-    line-height: 28px;
-    color: #656565;
-  }
-  .transaction-info-input > label {
-    margin: 10px 10% 0px 10%;
-    font-size: 16px;
-    color: black;
-    opacity: 78%;
-    text-align: left;
-  }
-  .transaction-info-input > input {
-    padding: 0;
-    margin: 5px 10%;
     height: 28px;
-    width: 80%;
+
+    background-color: #3f879b;
+    border: none;
     border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.158);
-  }
-  .transaction-info-input > input:hover {
-    border-color: rgba(64, 224, 208, 0.836);
+
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
   }
 }

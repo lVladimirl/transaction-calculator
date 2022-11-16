@@ -1,13 +1,10 @@
+import "./index.css";
+import * as yup from "yup";
+import { Api } from "../../api/index";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
-import { useHistory } from "react-router-dom";
-// import { Link } from "react-router-dom";
-import { Api } from "../../api/index";
-import "./index.css";
 
-export const TransactionForm = ({setPrevisionDates}) => {
-  const history = useHistory();
+export const TransactionForm = ({ setPrevisionDates }) => {
 
   const schema = yup.object().shape({
     amount: yup
@@ -33,6 +30,7 @@ export const TransactionForm = ({setPrevisionDates}) => {
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
+
   const onSubmit = (data) => {
     if (data.days) {
       const treatedData = [];
@@ -46,7 +44,7 @@ export const TransactionForm = ({setPrevisionDates}) => {
         days: treatedData,
       };
       Api.post("", dataPackage).then((resp) => {
-        setPrevisionDates(resp.data)
+        setPrevisionDates(resp.data);
       });
     } else {
       const dataPackage = {
@@ -55,38 +53,43 @@ export const TransactionForm = ({setPrevisionDates}) => {
         mdr: data.mdr,
       };
       Api.post("", dataPackage).then((resp) => {
-        setPrevisionDates(resp.data)
+        setPrevisionDates(resp.data);
       });
     }
   };
+
   return (
     <form className="transaction-info-input" onSubmit={handleSubmit(onSubmit)}>
       <h2>Simule sua Antecipação</h2>
 
-      <label>Valor da venda</label>
-      {errors && <span>{errors.amount?.message}</span>}
+      <label>
+        Valor da venda {errors && <span>{errors.amount?.message}</span>}
+      </label>
       <input
         type={"number"}
-        placeholder="amount"
+        placeholder="Insira um valor"
         {...register("amount")}
       ></input>
-      
-      <label>Quantas parcelas</label>
-      {errors && <span>{errors.installments?.message}</span>}
+
+      <label>
+        Quantas parcelas {errors && <span>{errors.installments?.message}</span>}
+      </label>
       <input
         type={"number"}
         placeholder="installments"
         {...register("installments")}
       ></input>
 
-      <label>Percentual do MDR</label>
-      {errors && <span>{errors.mdr?.message}</span>}
+      <label>
+        Percentual do MDR {errors && <span>{errors.mdr?.message}</span>}
+      </label>
       <input type={"number"} placeholder="mdr" {...register("mdr")}></input>
 
-      <label>Dias de pagamento</label>
-      {errors && <span>{errors.days?.message}</span>}
+      <label>
+        Dias de pagamento {errors && <span>{errors.days?.message}</span>}
+      </label>
       <input type={"text"} placeholder="days" {...register("days")}></input>
-      <small>Ex: 15,30,45...</small>
+      <small>Ex: 15, 30, 45</small>
 
       <button type="submit">calcular</button>
     </form>
